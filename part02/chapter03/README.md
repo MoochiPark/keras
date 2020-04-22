@@ -2,7 +2,7 @@
 
 
 
-## Chapter 03. 학습과정 표시하기<sup>텐서보드 포함</sup>
+## Chapter 03. 학습과정 표시하기
 
 케라스로 딥러닝 모델을 개발할 때, 가장 많이 보게 되는 것이 `fit()` 함수로 화면에 찍는 로그이다. 
 이 로그에 포함된 수치가 학습이 제대로 되고 있는지, 학습을 그만할 지 등을 판단하는 중요한 척도가 된다.
@@ -153,7 +153,8 @@ custom_hist.init()
 
 for epoch_idx in range(1000):
     print ('epochs : ' + str(epoch_idx) )
-    model.fit(X_train, Y_train, epochs=1, batch_size=10, validation_data=(X_val, Y_val), callbacks=[custom_hist])
+    model.fit(X_train, Y_train, epochs=1, batch_size=10, 
+              validation_data=(X_val, Y_val), callbacks=[custom_hist])
 
 # 5. 모델 학습 과정 표시하기
 %matplotlib inline
